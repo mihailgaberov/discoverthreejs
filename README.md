@@ -33,5 +33,5 @@ yarn install
 4. Run the application:
 
 ```
-yarn start
+yarn dev
 ```
