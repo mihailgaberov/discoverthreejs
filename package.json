@@ -1,0 +1,12 @@
+{
+  "name": "discoverthreejs",
+  "version": "1.0.0",
+  "description": "Learning by doing Three.js",
+  "main": "main.js",
+  "author": "Mihail Gaberov <mihail.gaberov@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "three": "^0.166.1"
+  }
+}
