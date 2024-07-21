@@ -14,9 +14,6 @@ class Resizer {
     window.addEventListener("resize", () => {
       // set the size again if a resize occurs
       setSize(container, camera, renderer);
-
-      // perform any custom actions
-      this.onResize();
     });
 
     // Set the camera's aspect ratio
@@ -31,7 +28,5 @@ class Resizer {
     // set the pixel ratio (for mobile devices)
     renderer.setPixelRatio(window.devicePixelRatio);
   }
-
-  onResize() {}
 }
 export { Resizer };
