@@ -1,14 +1,15 @@
-import { BoxBufferGeometry, Mesh, MeshBasicMaterial } from "three";
+import { BoxGeometry, Mesh, MeshBasicMaterial } from "three";
 
 function createCube() {
   // create a geometry
-  const geometry = new BoxBufferGeometry(2, 2, 2);
+  const geometry = new BoxGeometry(2, 2, 2);
 
   // create a default (white) Basic material
   const material = new MeshBasicMaterial();
 
   // create a Mesh containing the geometry and material
   const cube = new Mesh(geometry, material);
+  cube.position.set(-1, 1, -5);
 
   return cube;
 }
