@@ -1,4 +1,5 @@
 import { BoxGeometry, Mesh, MeshStandardMaterial } from "three";
+import { MathUtils } from "three";
 
 function createCube() {
   // create a geometry
@@ -12,12 +13,13 @@ function createCube() {
   // create a Mesh containing the geometry and material
   const cube = new Mesh(geometry, material);
   cube.rotation.set(-0.5, -0.1, 0.8);
-  cube.scale.set(0.5, 0.5, 0.5);
 
-  cube.tick = () => {
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-    cube.rotation.z += 0.01;
+  const radiansPerSecond = MathUtils.degToRad(30);
+
+  cube.tick = (delta) => {
+    cube.rotation.x += radiansPerSecond * delta;
+    cube.rotation.y += radiansPerSecond * delta;
+    cube.rotation.z += radiansPerSecond * delta;
   };
 
   return cube;
