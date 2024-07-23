@@ -7,7 +7,6 @@ function main() {
   let isRunning = false;
 
   toggleButton.addEventListener("click", () => {
-    console.log("toggle", world);
     if (isRunning) {
       world.stop();
       isRunning = false;
