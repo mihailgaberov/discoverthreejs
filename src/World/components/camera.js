@@ -14,7 +14,6 @@ function createCamera() {
 
   camera.tick = (delta) => {
     camera.position.z += delta;
-    camera.zoom -= delta;
   };
 
   return camera;
