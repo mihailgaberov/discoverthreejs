@@ -9,7 +9,7 @@ function createMaterial() {
   const texture = textureLoader.load("/assets/textures/uv-test-bw.png");
 
   // create a "standard" material
-  const material = new MeshStandardMaterial({ map: texture });
+  const material = new MeshStandardMaterial({ map: texture, color: "purple" });
 
   return material;
 }
