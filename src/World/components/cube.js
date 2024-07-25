@@ -1,4 +1,10 @@
-import { BoxGeometry, Mesh, MeshStandardMaterial, TextureLoader } from "three";
+import {
+  BoxGeometry,
+  CylinderGeometry,
+  Mesh,
+  MeshStandardMaterial,
+  TextureLoader,
+} from "three";
 import { MathUtils } from "three";
 
 function createMaterial() {
@@ -6,7 +12,7 @@ function createMaterial() {
   const textureLoader = new TextureLoader();
 
   // load a texture
-  const texture = textureLoader.load("/assets/textures/uv-test-bw.png");
+  const texture = textureLoader.load("/assets/textures/uv-test-col.png");
 
   // create a "standard" material
   const material = new MeshStandardMaterial({ map: texture, color: "purple" });
@@ -16,7 +22,8 @@ function createMaterial() {
 
 function createCube(container) {
   // create a geometry
-  const geometry = new BoxGeometry(2, 2, 2);
+  // const geometry = new BoxGeometry(2, 2, 2);
+  const geometry = new CylinderGeometry(5, 5, 20, 32);
 
   const material = createMaterial();
 
