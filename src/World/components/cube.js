@@ -22,8 +22,7 @@ function createMaterial() {
 
 function createCube(container) {
   // create a geometry
-  // const geometry = new BoxGeometry(2, 2, 2);
-  const geometry = new CylinderGeometry(5, 5, 20, 32);
+  const geometry = new BoxGeometry(2, 2, 2);
 
   const material = createMaterial();
 
