@@ -13,6 +13,10 @@ function createMaterial() {
 
   // load a texture
   const texture = textureLoader.load("/assets/textures/uv-test-col.png");
+  texture.offset.set(0.1, 0.1);
+  texture.rotation = Math.PI / 4;
+  texture.repeat.set(2, 2);
+  texture.center.set(0.5, 0.5);
 
   // create a "standard" material
   const material = new MeshStandardMaterial({ map: texture, color: "purple" });
