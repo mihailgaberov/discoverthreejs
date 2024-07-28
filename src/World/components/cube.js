@@ -8,7 +8,6 @@ import {
 import { MathUtils } from "three";
 
 function createMaterial() {
-  // create a texture loader.
   const textureLoader = new TextureLoader();
 
   // load a texture
