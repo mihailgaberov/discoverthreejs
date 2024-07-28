@@ -31,6 +31,7 @@ class World {
     // loop.updatables.push(cube);
     loop.updatables.push(camera);
     loop.updatables.push(light);
+    loop.updatables.push(controls);
 
     scene.add(cube, light);
 

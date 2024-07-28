@@ -35,11 +35,11 @@ function createCube(container) {
   cube.position.set(-5, 1, 0); // Start position on the left
   cube.rotation.set(-0.5, -0.1, 0.8);
 
-  const radiansPerSecond = MathUtils.degToRad(30);
-  let direction = 1; // Initial direction (1 means moving right, -1 means moving left)
-  const speed = 2; // Units per second
+  // const radiansPerSecond = MathUtils.degToRad(30);
+  // let direction = 1; // Initial direction (1 means moving right, -1 means moving left)
+  // const speed = 2; // Units per second
 
-  cube.tick = (delta) => {
+  /* cube.tick = (delta) => {
     // Update rotation
     cube.rotation.x += radiansPerSecond * delta;
     cube.rotation.y += radiansPerSecond * delta;
@@ -52,7 +52,7 @@ function createCube(container) {
     if (cube.position.x > 5 || cube.position.x < -5) {
       direction *= -1;
     }
-  };
+  }; */
 
   return cube;
 }
