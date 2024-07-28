@@ -6,6 +6,14 @@ function createControls(camera, canvas) {
 
   controls.target.set(1, 2, 3);
 
+  // controls.enabled = false;
+  controls.enableRotate = false;
+  controls.enableZoom = true;
+  controls.enablePan = false;
+
+  controls.autoRotate = true;
+  controls.autoRotateSpeed = 23;
+
   controls.tick = () => controls.update();
 
   return controls;
