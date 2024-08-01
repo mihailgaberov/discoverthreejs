@@ -1,19 +1,13 @@
-import { DirectionalLight } from "three";
+import { DirectionalLight, AmbientLight, HemisphereLight } from "three";
 
 function createLights() {
-  const light = new DirectionalLight("white", 8);
+  const ambientLight = new AmbientLight("white", 2);
 
-  // move the light right, up, and towards us
-  light.position.set(10, 10, 10);
+  const mainLight = new DirectionalLight("white", 5);
+  mainLight.position.set(10, 10, 10);
 
-  light.tick = (delta) => {
-    // move the light in a circle
-    const radiansPerSecond = Math.PI / 2;
-    light.position.x = 10 * Math.sin(radiansPerSecond * delta);
-    light.position.z = 10 * Math.cos(radiansPerSecond * delta);
-  };
+  mainLight.tick = () => {};
 
-  return light;
+  return { ambientLight, mainLight };
 }
-
 export { createLights };
