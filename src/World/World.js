@@ -1,5 +1,5 @@
 import { createCamera } from "./components/camera.js";
-import { createCube } from "./components/cube.js";
+import { createMeshGroup } from "./components/meshGroup.js";
 import { createLights } from "./components/lights.js";
 import { createScene } from "./components/scene.js";
 
@@ -25,7 +25,10 @@ class World {
 
     const controls = createControls(camera, renderer.domElement);
 
-    const cube = createCube();
+    const meshGroup = createMeshGroup();
+
+    loop.updatables.push(controls, meshGroup);
+
     const { mainLight, ambientLight } = createLights();
 
     // loop.updatables.push(cube);
@@ -33,7 +36,7 @@ class World {
     loop.updatables.push(mainLight);
     loop.updatables.push(controls);
 
-    scene.add(cube, mainLight, ambientLight);
+    scene.add(ambientLight, mainLight, meshGroup);
 
     const resizer = new Resizer(container, camera, renderer);
   }
