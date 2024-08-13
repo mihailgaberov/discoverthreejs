@@ -26,8 +26,9 @@ function createMeshGroup() {
 
     group.add(sphere);
   }
-  // add the sphere to the group
+
   group.add(protoSphere);
+
   // every sphere inside the group will be scaled
   group.scale.multiplyScalar(2);
 
