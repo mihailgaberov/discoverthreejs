@@ -16,8 +16,6 @@ function createCamera() {
 
   camera.tick = (delta) => {
     time += delta;
-    // Create a smooth oscillation using a sine wave
-    // camera.position.z = 10 + Math.sin(time) * 10;
   };
 
   return camera;
